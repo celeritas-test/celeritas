@@ -31,7 +31,7 @@ jobs:
     if: ${{ vars.CELER_CI || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-24.04
     steps:
-      - name: Success
+      - name: Successitastic
         run: |
           echo "Running on repository ${{ github.repository }}"
 
