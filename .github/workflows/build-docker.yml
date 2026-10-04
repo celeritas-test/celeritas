@@ -21,8 +21,8 @@ jobs:
     name: docker
     runs-on: ubuntu-24.04
     steps:
-      - name: Sleep 2 minutes
+      - name: Fail
         run: |
-          sleep 120
+          false
 
 # vim: set nowrap tw=100:
