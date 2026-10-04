@@ -36,6 +36,10 @@ jobs:
         || matrix.platform == 'windows' && 'windows-2025'
       }}
     steps:
+      - name: fail conditionally
+        if: github.event_name != 'pull_request'
+        run: |
+          false
       - name: Check out Celeritas
         uses: actions/checkout@v7
 
