@@ -1,3 +1,9 @@
+> [!WARNING]
+> **This is not the official Celeritas repository.** It is a test fork used to
+> try out GitHub workflows and issue/PR templates. Most CI is disabled here (only
+> the ultralite build and the event-file upload run). The official repository is
+> [celeritas-project/celeritas](https://github.com/celeritas-project/celeritas).
+
 # Celeritas
 
 The Celeritas project implements HEP detector physics on GPU accelerator

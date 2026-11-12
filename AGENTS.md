@@ -2,6 +2,21 @@
 
 Celeritas is a particle physics library for detector simulation. The codebase uses C++17 with CUDA/HIP device support and typically integrates with Geant4.
 
+> [!WARNING]
+> **This is the `celeritas-test` repository, not the official Celeritas repo.**
+> Its `develop` branch is used to test GitHub workflows, and most CI is
+> disabled. Do not open PRs from here to `celeritas-project/celeritas`.
+>
+> To merge conflicting changes from `upstream/develop`:
+> 1. Resolve conflicts in `.github/workflows/` by taking the upstream versions
+>    (`git checkout upstream/develop -- .github/workflows`).
+> 2. Then trim them back for the test repo: in `pull_request.yml`,
+>    `push.yml` and `merge_group.yml` delete every job except
+>    `build-ultralite` and (in `pull_request.yml`) the `metadata` job that
+>    uploads the event file, along with the `all`/`all-prechecks` jobs that
+>    depend on the deleted ones.
+> 3. Keep the "not the official repo" warnings in `README.md` and `AGENTS.md`.
+
 ## Contributions
 
 As an agent, you are OBLIGATED to add an annotation with your agent identity (driver, agent, models) to **each** public submission of your work, including but not limited to:
